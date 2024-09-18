@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneo Mistral Homes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Torneo de Pádel Mistral Homes</h1>
+    </header>
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Partidos</a>
+        <a href="#">Clasificación</a>
+        <a href="#">Jugadores</a>
+    </nav>
+
+    <!-- Sección principal centrada para noticias, videos e imágenes -->
+    <section class="main-section" style="text-align: center; margin: 20px 0;">
+        <h2>Noticias del Torneo</h2>
+        <div class="news">
+            <p>¡Bienvenidos al Torneo de Pádel Mistral Homes! Sigue las últimas novedades y eventos aquí.</p>
+            <!-- Aquí puedes añadir un video del torneo -->
+            <video width="600" controls>
+                <source src="http://www.youtube.com" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+            <br>
+            <!-- Imagenes del torneo -->
+            <img src="torneo-image1.jpg" alt="Torneo Pádel" width="300">
+            <img src="torneo-image2.jpg" alt="Jugadores en acción" width="300">
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Resultado del partido</h2>
+            <form id="result-form">
+                <label for="winner">Ganador:</label>
+                <select id="winner">
+                    <!-- Opciones para los jugadores (se generarán dinámicamente) -->
+                </select><br>
+
+                <label for="loser-score">Sets del perdedor:</label>
+                <input type="number" id="loser-score" min="0" max="6" value="0"><br>
+
+                <input type="submit" class="button" value="Registrar Resultado" onclick="registerResult()">
+            </form>
+        </div>
+
+        <div class="content">
+            <h2 id="current-match">Partido actual: Cargando...</h2>
+
+            <!-- Tablas de Clasificación para cada grupo -->
+            <div class="group-table">
+                <h2>Clasificación Grupo A</h2>
+                <table id="group-a-table">
+                    <thead>
+                        <tr>
+                            <th>Jugador</th>
+                            <th>Puntos</th>
+                            <th>Partidos Jugados</th>
+                            <th>Partidos Ganados</th>
+                            <th>Partidos Perdidos</th>
+                            <th>Diferencia de Sets</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí se llenarán las filas con jugadores y puntuaciones -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="group-table">
+                <h2>Clasificación Grupo B</h2>
+                <table id="group-b-table">
+                    <thead>
+                        <tr>
+                            <th>Jugador</th>
+                            <th>Puntos</th>
+                            <th>Partidos Jugados</th>
+                            <th>Partidos Ganados</th>
+                            <th>Partidos Perdidos</th>
+                            <th>Diferencia de Sets</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí se llenarán las filas con jugadores y puntuaciones -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="group-table">
+                <h2>Clasificación Grupo C</h2>
+                <table id="group-c-table">
+                    <thead>
+                        <tr>
+                            <th>Jugador</th>
+                            <th>Puntos</th>
+                            <th>Partidos Jugados</th>
+                            <th>Partidos Ganados</th>
+                            <th>Partidos Perdidos</th>
+                            <th>Diferencia de Sets</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí se llenarán las filas con jugadores y puntuaciones -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Vincular archivo JS -->
+
+</body>
