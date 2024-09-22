@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneo de Pádel Residencial</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ejemplo de estilos para los modales */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .player-photo {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
+        .player-card img {
+            width: 100px;
+        }
+        .player-card {
+            display: flex;
+            align-items: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Torneo de Pádel Residencial</h1>
+</header>
+
+<nav>
+    <nav>
+        <a href="torneopadel.html">Inicio</a>
+        <a href="./../calendario.html">Calendario</a>
+        <a href="./../clasificacion.html">Clasificación</a>
+        <a href="multimedia">Multimedia</a>
+        <a href="premios">Premios</a>
+        <a href="./../chat/info.html">Info</a>
+    </nav>
+
+</nav>
+
+<div class="container">
+    <!-- Barra lateral para registro -->
+    <aside class="sidebar">
+        <h2>Registro de Usuario</h2>
+        <form action="/crear_usuario" method="POST">
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Crear Usuario">
+        </form>
+    </aside>
+
+    <div class="content">
+        <!-- Sección de Noticias -->
+        <section id="noticias" class="news-section">
+            <h2>Noticias</h2>
+            <div class="media-wrapper">
+                <img src="https://static.euronews.com/articles/stories/07/64/08/34/808x505_cmsv2_ae66566e-ec17-5cdd-8d08-7471a3a1e3b8-7640834.jpg" alt="Noticia del Torneo">
+                <div class="media-text">
+                    <p><strong>José Luís</strong> intentará ganar al grandísimo <strong>Juanan</strong> en un torneo en el que parte como favorito.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Imágenes -->
+        <section id="imagenes" class="image-section">
+            <h2>Imágenes del Torneo</h2>
+            <div class="media-wrapper">
+                <img src="https://www.mundodeportivo.com/files/article_gallery_microformat/uploads/2023/09/26/6569b1021cc31.jpeg" alt="Imagen del Torneo">
+                <div class="media-text">
+                    <p>Explora la galería del torneo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Videos -->
+        <section id="videos" class="video-section">
+            <h2>Videos del Torneo</h2>
+            <div class="media-wrapper">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                <div class="media-text">
+                    <p>Disfruta de los mejores momentos del torneo en este vídeo.</p>
+                </div>
+            </div>
+        </section>
+
